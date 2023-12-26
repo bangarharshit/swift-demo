@@ -44,6 +44,8 @@
 		4E2EB72E2B399A0B00F35DE8 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2EB72D2B399A0B00F35DE8 /* ContentViewModel.swift */; };
 		4E2EB7302B39D19C00F35DE8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2EB72F2B39D19C00F35DE8 /* LoginView.swift */; };
 		4E2EB7322B39D2EB00F35DE8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2EB7312B39D2EB00F35DE8 /* LoginViewModel.swift */; };
+		4E2EB7342B3AA74400F35DE8 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2EB7332B3AA74400F35DE8 /* LoggedInView.swift */; };
+		4E2EB7362B3AA96700F35DE8 /* LoggedInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2EB7352B3AA96700F35DE8 /* LoggedInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		4E2EB72D2B399A0B00F35DE8 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		4E2EB72F2B39D19C00F35DE8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4E2EB7312B39D2EB00F35DE8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4E2EB7332B3AA74400F35DE8 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		4E2EB7352B3AA96700F35DE8 /* LoggedInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				4E2EB7292B39972100F35DE8 /* AppDelegate.swift */,
+				4E2EB7352B3AA96700F35DE8 /* LoggedInViewModel.swift */,
+				4E2EB7332B3AA74400F35DE8 /* LoggedInView.swift */,
 				4E2EB7312B39D2EB00F35DE8 /* LoginViewModel.swift */,
 				4E2EB72F2B39D19C00F35DE8 /* LoginView.swift */,
 				4E2EB72D2B399A0B00F35DE8 /* ContentViewModel.swift */,
@@ -355,10 +361,12 @@
 			files = (
 				4E2EB72E2B399A0B00F35DE8 /* ContentViewModel.swift in Sources */,
 				4E2EB72A2B39972100F35DE8 /* AppDelegate.swift in Sources */,
+				4E2EB7342B3AA74400F35DE8 /* LoggedInView.swift in Sources */,
 				4E2EB7322B39D2EB00F35DE8 /* LoginViewModel.swift in Sources */,
 				4E2EB6CF2B39956000F35DE8 /* ContentView.swift in Sources */,
 				4E2EB7302B39D19C00F35DE8 /* LoginView.swift in Sources */,
 				4E2EB6CD2B39956000F35DE8 /* chat_appApp.swift in Sources */,
+				4E2EB7362B3AA96700F35DE8 /* LoggedInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

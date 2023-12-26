@@ -21,20 +21,7 @@ class ContentViewModel: ObservableObject {
         }
     }
     
-    func getUser() -> String {
-        return Auth.auth().currentUser?.uid ?? ""
-    }
-    
-    func signOut() {
-          do {
-              try Auth.auth().signOut()
-              // Sign-out successful, navigate to another screen or update UI accordingly
-              isSignedIn = false
-          } catch let signOutError as NSError {
-              // Failed to sign out
-              print("Error signing out: \(signOutError.localizedDescription)")
-          }
-      }
+   
 
     // You can add more methods for sign-up, sign-out, etc.
 }

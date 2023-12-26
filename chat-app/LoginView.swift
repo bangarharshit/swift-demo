@@ -12,10 +12,10 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    @ObservedObject var loginViewModel = LoginViewModel()
+    @ObservedObject var loginViewModel: LoginViewModel
     @State private var isSignUp = false // Flag to determine if it's a sign-up or sign-in action
     @State private var showingAlert = false
-
+    
 
     var body: some View {
         VStack {
@@ -27,7 +27,7 @@ struct LoginView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            Button(action: signIn) {
+            Button(action: signInOrSignUp) {
                 Text(isSignUp ? "Signup": "Login")
                     .padding()
                     .foregroundColor(.white)
@@ -52,7 +52,7 @@ struct LoginView: View {
            isSignUp.toggle()
        }
 
-    func signIn() {
+    func signInOrSignUp() {
         guard !email.isEmpty, !password.isEmpty else {
             // Show an alert or perform error handling for empty email/password
             showingAlert = true
@@ -60,6 +60,6 @@ struct LoginView: View {
         }
 
             // Trigger sign-in action using ViewModel method
-        self.loginViewModel.signIn(email: email, password: password, isSignup: isSignUp)
+        self.loginViewModel.signInOrSignUp(email: email, password: password, isSignup: isSignUp)
     }
 }

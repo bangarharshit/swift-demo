@@ -9,28 +9,21 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @ObservedObject var contentVM = ContentViewModel()
+    @ObservedObject var contentViewModel: ContentViewModel
     var body: some View {
-       if contentVM.isSignedIn {
+       if contentViewModel.isSignedIn {
            // Show user-specific content
-           VStack {
-               Text("Welcome!")
-               Button(action: signout) {
-                   Text("Signout")
-               }
-           }
-       } else {
+           LoggedInView(loggedInViewModel: LoggedInViewModel(bindingField: $contentViewModel.isSignedIn))       } else {
+
            // Show login/signup views
-           LoginView()
+           LoginView(loginViewModel: LoginViewModel(bindingField: $contentViewModel.isSignedIn))
        }
     }
-    func signout() {
-        contentVM.signOut()
-    }
+
 }
 
 
 
 #Preview {
-    ContentView()
+    ContentView(contentViewModel: ContentViewModel())
 }
